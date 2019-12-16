@@ -23,17 +23,16 @@ let createTask = (task) => {
 	
 
 	span.addEventListener('dblclick', (parent) => {
-		// let span = document.querySelector('span')
 		let textarea = document.createElement('textarea')
 		textarea.style.width = parent.offsetWidth + 'px'
 		textarea.style.height = parent.offsetHeight + 'px'
 		textarea.innerHTML = span.innerHTML
 
-		textarea.addEventListener('keyup', (e) => {
-			if(e.keyCode == 13){
+		textarea.addEventListener('keyup', (event) => {
+			if(event.keyCode == 13){
 				let value = textarea.value
 				span.innerHTML = value
-				this.removeChild(e)
+				textarea.remove()
 			}
 			
 		})

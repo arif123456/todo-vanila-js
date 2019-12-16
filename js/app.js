@@ -8,7 +8,7 @@
 
  		todoList.appendChild(createTask(name))
  		inputField.value = ''
- 		
+
  	}
  })
 
@@ -19,8 +19,6 @@ let createTask = (task) => {
 
 	let span = document.createElement('span')
 	div.appendChild(span)
-
-	
 
 	span.addEventListener('dblclick', (parent) => {
 		let textarea = document.createElement('textarea')
@@ -54,6 +52,7 @@ let createTask = (task) => {
 		div.remove()
 	})
 
+
 	span.innerHTML = task
  
 	return div;
@@ -66,3 +65,4 @@ let toggleClass = (event) => {
 	event.parentElement.setAttribute('isComplete','true')
 	
 }
+
